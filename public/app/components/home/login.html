@@ -1,0 +1,16 @@
+<h2>Sing Up From </h2>
+<form [formGroup]="signupFrom" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <label>UserName:
+      <input class="form-control" formControlName="user_name">
+    </label>
+    <label>Password:
+        <input class="form-control" formControlName="password">
+    </label>
+  </div>
+  <button type="submit" [disabled]="signupFrom.pristine" class="btn btn-success">Submit</button>
+    <button type="reset" (click)="revert()" [disabled]="signupFrom.pristine" class="btn btn-danger">Reset</button>
+  
+
+</form>
+<p>Form value: {{ signupFrom.value | json }}</p>

@@ -1,0 +1,55 @@
+        <form class="well" (ngSubmit)="addUser($event)">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Add name...">  
+                        <!--{{getname}}-->
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="Add username...">    
+                       <!-- {{getusername}}-->
+                    </div> 
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="email_address" name="email_address" class="form-control" placeholder="Add email..."> 
+                        <!--{{getemail}} -->  
+                    </div>   
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="password" name="password" class="form-control" placeholder="Add password...">    
+                    </div>  
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="number" name="number" class="form-control" placeholder="Add number...">    
+                        <!--{{getnumber}}-->
+                    </div>  
+                    <button type="submit" class="btn btn-success">Save</button>
+        </form>    
+
+ 
+
+       <!-- <div class="task-list">
+            <table class="table">
+                <thead>
+                    <th>Name</th> 
+                    <th>username</th> 
+                    <th>email</th> 
+                    <th>number</th>
+                </thead>
+                <tr *ngFor="let users of users">
+                    <td>
+                        {{users.name}}    
+                    </td> 
+                    <td>
+                        {{users.user_name}}    
+                    </td> 
+                    <td>
+                        {{users.email_address}}    
+                    </td> 
+                    <td>
+                        {{users.number}}    
+                    </td> 
+                    <td> 
+                        <!--<input type="checkbox" [checked]="users._id" (click)="updateStatus(users._id)">-->
+                        <!--<input type="button"  value="Edit" class="btn btn-success" (click)="updateUser(users)"> 
+                    </td>
+                    <td> <input type="button" (click)="deleteUser(users._id)" value="Delete" class="btn btn-danger">  </td>
+                </tr>
+            </table>
+    </div>-->
+

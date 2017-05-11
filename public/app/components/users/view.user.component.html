@@ -1,0 +1,53 @@
+<div class="task-list">
+    <table class="table">
+        <thead>
+            <th>Name</th> 
+            <th>Username</th> 
+            <th>Email Address</th> 
+            <th>Password</th> 
+            <th>Number</th>
+        </thead>
+        <tr *ngFor="let users of users">
+            <td>
+               {{users.name}}
+            </td> 
+            <td>
+                {{users.user_name}}    
+            </td> 
+            <td>
+                {{users.email_address}}    
+            </td> 
+            <td>
+                {{users.password}}    
+            </td> 
+            <td>
+                {{users.number}}    
+            </td> 
+            <td> 
+                <input type="button"  value="Edit" class="btn btn-success" (click)="updateUser(users)"> 
+            </td>
+            <!--<td> 
+                <input type="button"  value="TEst" class="btn btn-success" (click)="show = !show"> 
+            </td>-->
+            <td> <input type="button" (click)="deleteUser(users._id)" value="Delete" class="btn btn-danger">  </td>
+        </tr>
+    </table>
+</div>
+                <!--<div *ngIf="show">
+                        user is Deleted 
+                </div>-->
+
+                <!--<div  *ngIf="msgdv" [ngClass]="{'msgdv': msgdv}">
+                     user is Deleted 
+                </div>-->
+
+                 <div  *ngIf="open" [ngClass]="{'open': open}">
+                    <input [(ngModel)]="user.name"  [value]="name" (keypress)="EditUser(user)">
+                    <input  [(ngModel)]="user.user_name" [value]="username" (keypress)="EditUser(user)">    
+                    <input  [(ngModel)]="user.email_address" [value]="email_address"   (keypress)="EditUser(user)"> 
+                    <input  [(ngModel)]="user.password" [value]="password"  (keypress)="EditUser(user)">    
+                    <input  [(ngModel)]="user.number"  [value]="number"  (keypress)="EditUser(user)">
+                </div>
+  
+                  
+         
